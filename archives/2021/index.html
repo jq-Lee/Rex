@@ -25,6 +25,8 @@
 
 
 
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
 
 
     <link rel="dns-prefetch" href="https://.disqus.com"/>
@@ -166,12 +168,12 @@
 <!-- Theme Background Related-->
 
     <style>
-      body{
+      body {
         background-color: #F5F5F5;
       }
 
       /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
         background-color: #fff;
       }
     </style>
@@ -330,10 +332,10 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Doe's avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="Rex Lee's avatar">
             </div>
             <div>
-                <strong>John Doe</strong>
+                <strong>Rex Lee</strong>
                 <span>2月 23, 2021</span>
             </div>
         </div>
@@ -386,10 +388,10 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Doe's avatar">
+                <img src="/img/avatar.png" width="44px" height="44px" alt="Rex Lee's avatar">
             </div>
             <div>
-                <strong>John Doe</strong>
+                <strong>Rex Lee</strong>
                 <span>2月 23, 2021</span>
             </div>
         </div>
@@ -457,12 +459,12 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="John Doe's avatar">
+        <img src="/img/avatar.png" alt="Rex Lee's avatar">
     </div>
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        youremail@email.com
+        13333895791@163.com
         <b class="caret"></b>
     </a>
 </div>
@@ -525,6 +527,16 @@
 
     <!-- Article Number  -->
     
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">2</span>
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
 </ul>
 
 
@@ -573,6 +585,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Sidebar Image -->
     
+    <span id="footer-image">
+        <a href="https://www.upyun.com/" target="_blank" title="upyun_logo">
+            <img src="/img/upyun_logo.svg" alt="upyun_logo"><!--
+     --></a>
+    </span>
+
 
 </aside>
 
@@ -622,6 +640,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Weibo -->
     
+        <a href="https://weibo.com/u/6304631252?refer_flag=1005055010" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
 
     <!-- Instagram -->
     
@@ -631,11 +655,23 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Github -->
     
+        <a href="https://github.com/jq-Lee" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
 
     <!-- LinkedIn -->
     
 
     <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/Rex_Lee" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
     
 
     <!-- Bilibili -->
@@ -714,9 +750,16 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
 
 
 
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -741,6 +784,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -752,12 +799,24 @@ It will not impact the appearance and can give developers a lot of support :)
 
     
     
+        
+            HanabiBrowser.clearColors();
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
 </script>
 
 <!-- MathJax Load-->
 
 
 <!-- Bing Background -->
+
+<script type="text/ls-javascript" id="Bing-Background-script">
+    queue.offer(function(){
+        $('body').attr('data-original', 'https://api.i-meto.com/bing?[object Object]');
+    });
+</script>
 
 
 <script type="text/ls-javascript" id="lazy-load">
@@ -784,7 +843,7 @@ It will not impact the appearance and can give developers a lot of support :)
     var copyrightNow = new Date().getFullYear();
     var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 0000;
+    copyrightSince = 2021;
     if (copyrightSince === copyrightNow||copyrightSince === 0000) {
         textContent.textContent = copyrightNow
     } else {
