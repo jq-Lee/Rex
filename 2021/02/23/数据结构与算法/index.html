@@ -241,7 +241,7 @@
 
     
         <meta property="article:published_time" content="Tue Feb 23 2021 22:29:50 GMT+0800">
-        <meta property="article:modified_time" content="Tue Feb 23 2021 22:32:44 GMT+0800">
+        <meta property="article:modified_time" content="Tue Feb 23 2021 22:48:11 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,7 +264,7 @@
     "mainEntityOfPage": "http://example.com/2021/02/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.html",
     "headline": "数据结构与算法",
     "datePublished": "Tue Feb 23 2021 22:29:50 GMT+0800",
-    "dateModified": "Tue Feb 23 2021 22:32:44 GMT+0800",
+    "dateModified": "Tue Feb 23 2021 22:48:11 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Rex Lee",
@@ -497,7 +497,7 @@
 <li><strong>查询(Find/Get)：</strong>查询元素所属集合。</li>
 </ol>
 <p>实际操作中，我们会使用一个点来代表整个集合，即一个元素的根节点（可以理解为父亲）。</p>
-<h4 id="3、具体实现"><a href="#3、具体实现" class="headerlink" title="3、具体实现"></a>3、具体实现</h4><p>我们建立一个数组<code>fa[ ]</code>或<code>pre[ ]</code>表示一个并查集，<code>fa[i]</code>表示<code>i</code>的父节点。<br><strong>初始化：</strong>每一个点都是一个集合，因此自己的父节点就是自己<code>fa[i]=i</code><br><strong>查询：</strong>每一个节点不断寻找自己的父节点，若此时自己的父节点就是自己，那么该点为集合的根结点，返回该点。<br><strong>修改：</strong>合并两个集合只需要合并两个集合的根结点，即<code>fa[RootA]=RootB</code>，其中<code>RootA</code>,<code>RootB</code>是两个元素的根结点。<br><strong>路径压缩：</strong><br>实际上，我们在查询过程中只关心根结点是什么，并不关心这棵树的形态(有一些题除外)。因此我们可以在查询操作的时候将访问过的每个点都指向树根，这样的方法叫做路径压缩，单次操作复杂度为O(logN)O(logN)。<br>结合下图理解(图为状态压缩的过程)：<br><img src="https://cdn.nlark.com/yuque/0/2021/png/12440900/1610541097441-3b183d71-982a-41df-b225-0bcdaa3285ae.png#align=left&display=inline&height=269&margin=%5Bobject%20Object%5D&name=kr1TP3Oox2abEQA.png&originHeight=269&originWidth=636&size=21648&status=done&style=none&width=636" alt="kr1TP3Oox2abEQA.png"></p>
+<h4 id="3、具体实现"><a href="#3、具体实现" class="headerlink" title="3、具体实现"></a>3、具体实现</h4><p>我们建立一个数组<code>fa[ ]</code>或<code>pre[ ]</code>表示一个并查集，<code>fa[i]</code>表示<code>i</code>的父节点。<br><strong>初始化：</strong>每一个点都是一个集合，因此自己的父节点就是自己<code>fa[i]=i</code><br><strong>查询：</strong>每一个节点不断寻找自己的父节点，若此时自己的父节点就是自己，那么该点为集合的根结点，返回该点。<br><strong>修改：</strong>合并两个集合只需要合并两个集合的根结点，即<code>fa[RootA]=RootB</code>，其中<code>RootA</code>,<code>RootB</code>是两个元素的根结点。<br><strong>路径压缩：</strong><br>实际上，我们在查询过程中只关心根结点是什么，并不关心这棵树的形态(有一些题除外)。因此我们可以在查询操作的时候将访问过的每个点都指向树根，这样的方法叫做路径压缩，单次操作复杂度为O(logN)O(logN)。<br>结合下图理解(图为状态压缩的过程)：<br><img src="https://github.com/jq-Lee/jq-Lee.github.io/tree/main/img/blog_img/1.png" alt="1.png"></p>
 <h3 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h3><p>初始化的模板：</p>
 <pre><code class="c">for(int i=1;i&lt;=n;i++) pre[i]=i;
 </code></pre>
